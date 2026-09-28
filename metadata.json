@@ -1,0 +1,6 @@
+{
+  "name": "Tools Workshop",
+  "description": "All-in-one fast, private, and secure online utility workshop to merge, split, compress, and convert PDFs, images, documents, and developer utilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

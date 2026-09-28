@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools Workshop – Fast, Private & Free Online File Tools</title>
+    <meta name="description" content="All-in-one fast, private, and secure online utility workshop to merge, split, compress, and convert PDFs, images, documents, and developer utilities." />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tools Workshop" />
+    <meta property="og:title" content="Tools Workshop – Fast, Private & Free Online File Tools" />
+    <meta property="og:description" content="All-in-one fast, private, and secure online utility workshop to merge, split, compress, and convert PDFs, images, documents, and developer utilities." />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tools Workshop – Fast, Private & Free Online File Tools" />
+    <meta name="twitter:description" content="All-in-one fast, private, and secure online utility workshop to merge, split, compress, and convert PDFs, images, documents, and developer utilities." />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tools Workshop",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "description": "All-in-one fast, private, and secure online utility workshop to merge, split, compress, and convert PDFs, images, documents, and developer utilities.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Theme initialization script (prevents flash of wrong theme) -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('tools-workshop-theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            if (document.body) {
+              document.body.classList.add('dark');
+            } else {
+              document.addEventListener('DOMContentLoaded', function() {
+                document.body.classList.add('dark');
+              });
+            }
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#FFF7F7] text-[#171717] antialiased selection:bg-[#E53935] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

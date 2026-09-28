@@ -1,0 +1,337 @@
+@import "tailwindcss";
+
+:root {
+  --primary-red: #EF4444;
+  --dark-red: #DC2626;
+  --white: #FFFFFF;
+  --light-bg: #FAFAFA;
+  --dark-text: #111827;
+  --secondary-text: #4B5563;
+  --border-color: #E5E7EB;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Modern SaaS Grid Background Pattern */
+.saas-grid-bg {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+}
+
+body.dark .saas-grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EF4444;
+}
+
+/* ======================================================== */
+/* DARK MODE SYSTEM (Activated by .dark class on body)       */
+/* ======================================================== */
+body.dark {
+  --white: #18181b;
+  --light-bg: #0e0e11;
+  --dark-text: #f4f4f5;
+  --secondary-text: #a1a1aa;
+  --border-color: #27272a;
+  background-color: #0e0e11 !important;
+  color: #f4f4f5 !important;
+  color-scheme: dark;
+}
+
+/* Header & Navigation in Dark Mode */
+body.dark header {
+  background-color: rgba(18, 18, 22, 0.95) !important;
+  border-color: #27272a !important;
+}
+
+/* Card Containers & Panels */
+body.dark .bg-white {
+  background-color: #18181b !important;
+  color: #f4f4f5;
+}
+
+/* Sub-panels, inputs, and light-tinted backgrounds */
+body.dark .bg-\[\#FFF7F7\],
+body.dark .bg-\[\#FAF9F9\],
+body.dark .bg-\[\#FFFDFD\],
+body.dark .bg-\[\#F9F9F9\],
+body.dark .bg-\[\#FAFAFA\],
+body.dark .bg-\[\#F8F9FA\] {
+  background-color: #202024 !important;
+}
+
+/* Soft Red Accents in Dark Mode */
+body.dark .bg-\[\#FFF0F0\] {
+  background-color: #2b1315 !important;
+}
+
+body.dark .bg-\[\#FCE8E8\] {
+  background-color: #38181a !important;
+}
+
+/* Borders */
+body.dark .border-\[\#EEEEEE\],
+body.dark .border-\[\#E5E5E5\],
+body.dark .border-\[\#CCCCCC\],
+body.dark .border-\[\#DDD\],
+body.dark .border-\[\#EEE\],
+body.dark .border-\[\#F5EEEE\],
+body.dark .border-\[\#F5F5F5\],
+body.dark .border-\[\#DCD6D6\] {
+  border-color: #27272a !important;
+}
+
+/* Primary text */
+body.dark .text-\[\#171717\] {
+  color: #f4f4f5 !important;
+}
+
+/* Secondary & Muted text */
+body.dark .text-\[\#333333\],
+body.dark .text-\[\#444444\],
+body.dark .text-\[\#555555\],
+body.dark .text-\[\#666666\],
+body.dark .text-\[\#777777\],
+body.dark .text-\[\#888888\] {
+  color: #a1a1aa !important;
+}
+
+/* Form Controls & Editors */
+body.dark input:not([type="checkbox"]):not([type="radio"]),
+body.dark textarea,
+body.dark select {
+  background-color: #202025 !important;
+  color: #f4f4f5 !important;
+  border-color: #33333a !important;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #71717a !important;
+}
+
+/* Badges & Monospace Tags */
+body.dark kbd,
+body.dark code {
+  background-color: #222228 !important;
+  color: #f4f4f5 !important;
+  border-color: #33333c !important;
+}
+
+/* Subtle Hover states */
+body.dark .hover\:bg-\[\#FFF7F7\]:hover {
+  background-color: #27272e !important;
+}
+
+body.dark .hover\:text-\[\#171717\]:hover {
+  color: #ffffff !important;
+}
+
+body.dark .hover\:bg-neutral-100:hover {
+  background-color: #27272e !important;
+}
+
+/* Modals & Dialogs */
+body.dark .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: #0e0e11 !important;
+  border-color: #27272a !important;
+}
+
+/* Scrollbars in Dark Mode */
+body.dark ::-webkit-scrollbar-track {
+  background: #0e0e11;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #2e2e36;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #E53935;
+}
+
+/* ======================================================== */
+/* 3D ANIMATION & HOVER EFFECT UTILITIES                    */
+/* ======================================================== */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(-1.5deg);
+  }
+}
+
+@keyframes pulse-slow-glow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+@keyframes radar-ping {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  80%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-slow-glow 3.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+.animate-radar-ping {
+  animation: radar-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* 3D Button Press & Elevate Effect */
+.btn-3d {
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -6px rgba(229, 57, 53, 0.35);
+}
+
+.btn-3d:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px -2px rgba(229, 57, 53, 0.3);
+}
+
+/* Sheen sweep animation on buttons */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-150%) skewX(-20deg);
+  pointer-events: none;
+}
+
+.btn-sheen:hover::after {
+  animation: shimmer-sweep 0.75s ease-out;
+}
+
+/* Card 3D Depth on Hover */
+.card-hover-lift {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s ease;
+  will-change: transform;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -10px rgba(229, 57, 53, 0.12), 0 8px 16px -6px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .card-hover-lift:hover {
+  box-shadow: 0 16px 32px -10px rgba(229, 57, 53, 0.2), 0 8px 16px -6px rgba(0, 0, 0, 0.5);
+}
